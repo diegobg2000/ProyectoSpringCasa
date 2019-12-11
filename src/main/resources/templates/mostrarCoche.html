@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mostrar Coche</title>
+</head>
+<body>
+	<table border="1">
+	<tr>
+	<th>Id</th>
+	<th>Marca</th>
+	<th>Modelo</th>
+	<th>Color</th>
+	<th>Caballos</th>
+	</tr>
+	
+	<tr th:each="coche:${coches}">
+	
+	<td th:text="${coche.Id}"></td>
+	<td th:text = "${coche.marca}"></td>
+	<td th:text = ${coche.modelo}></td>
+	<td th:text = "${coche.color}"></td>
+	<td th:text = "${coche.caballos}"></td>
+	</tr>	
+	</table>
+	<a href="#" th:href="@{/addCoche}">Añadir Coche</a>
+	
+</body>
+</html>

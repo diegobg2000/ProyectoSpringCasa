@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Formulario Coche</h1>
+	<!-- action la ruta del PostMapping: A donde va el submit. El arroba es cunado mandas datos al servidor
+	y el dolar cuando lo recives.
+	El objeto es el que viene del GET. Ponemos el nombre que nos viene del GET que es "coche" 
+	Y el metodo es POST siempre porque es lo que necesitamos para enviar datos -->
+	<form action="#" th:action="@{/formulario}" th:object="${coche}" method="post">
+	<p>Marca</p>
+	<!-- th:field es para recoger datos.
+	El sibolo * significa que vas a utilizar el objeto que te entra por el formulario -->
+	<input type="text" th:field="*{marca}"/>
+	<p>Modelo</p>
+	<input type="text" th:field="*{modelo}"/>
+	<p>Color</p>
+	<input type="text" th:field="*{color}"/>
+	<p>Caballos</p>
+	<input type="number" th:field="*{caballos}"/>
+	
+	<input type="submit" value="submit">
+	</form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+	<body>
+		<!-- El nombre que le des en el each "coche se utilizara para llamar a los atributos" -->
+		
+<ul th:each="coche:${lista}">
+	<li th:text="${coche.marca}"></li>
+	<li th:text="${coche.modelo}"></li>
+	<li th:text="${coche.color}"></li>
+	<li th:text="${coche.caballos}"></li>
+</ul>
+		
+	</body>
+</html>
